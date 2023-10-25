@@ -1,0 +1,37 @@
+{
+  "name": "namaste",
+  "version": "1.0.0",
+  "description": "this is nam6aste react by ",
+  
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sar653/namastereact1.git"
+  },
+  "keywords": [
+    "react",
+    "nnam6aste"
+  ],
+  "author": "sar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sar653/namastereact1/issues"
+  },
+  "homepage": "https://github.com/sar653/namastereact1#readme",
+  "devDependencies": {
+    "parcel": "^2.10.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist":[
+    "Last 2 chrome version"
+  ]
+}
