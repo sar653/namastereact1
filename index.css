@@ -4,7 +4,7 @@
     border:1px solid black
 }
 .logo{
-    width: 200px;
+    width: 130px;
 }
 .nav-items>ul{
     display: flex;
@@ -18,7 +18,7 @@
 .res-card{
     padding: 5px;
     width: 200px;
-    height: 300px;
+    height: 450px;
     margin: 5px
 }
 .search{
@@ -26,6 +26,8 @@
 }
 .res-logo{
     width:100%;
+    object-fit: contain;
+
     
 }
 .res-card:hover{
@@ -36,4 +38,29 @@
 .res-container{
     display: flex;
     flex-wrap: wrap;
+}
+.img-container{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.filter-btn{
+    cursor: pointer;
+}
+.Shimmer-cards{
+    background-color: gray;
+    width: 200px;
+    height:400px;
+    margin:20px;
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.login{
+    padding: 0 20px;
+    cursor: pointer;
+}
+.filter{
+    display: flex;
 }

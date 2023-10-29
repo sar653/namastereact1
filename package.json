@@ -2,11 +2,9 @@
   "name": "namaste",
   "version": "1.0.0",
   "description": "this is nam6aste react by ",
-  
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
-    
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -29,9 +27,10 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
   },
-  "browserslist":[
+  "browserslist": [
     "Last 2 chrome version"
   ]
 }
