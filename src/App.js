@@ -1,20 +1,21 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter ,Outlet,RouterProvider} from "react-router-dom";
-import Aboutus from "./components/Aboutus";
+//import Aboutus from "./components/Aboutus";
 import Contactus from "./components/contactus";
 import Error from "./components/Error";
 import RestarauntMenu from "./components/RestarauntMenu";
+//import Grocery from "./components/Grocery";
 
 //const heading= React.createElement(
 //  "h1",{id:"heading"
 //},"nam6aste react")
 
 
-
-
+const Grocery=lazy(()=>import("./components/Grocery"))
+const Aboutus=lazy(()=>import("./components/Aboutus"))
 
 
 const Applayout = () => {
@@ -33,25 +34,25 @@ const appRouter=createBrowserRouter([{
      path:"/",
   element:<Body></Body>},
     {
-
     path:"/Aboutus",
-    element:<Aboutus></Aboutus>,
+    element:<Suspense fallback={<h1> loading...</h1>}><Aboutus/></Suspense>
   },{
   
     path:"/Contactus",
     element:<Contactus></Contactus>
-  },{
+  },
+  {
+    path:"/Grocery",
+   element:<Suspense fallback={<h1> loading...</h1>}><Grocery/></Suspense>
+   //element:<Grocery></Grocery>
+  }
+  ,{
     path:"/restaurants/:resId",
     element:<RestarauntMenu></RestarauntMenu>
   }
-  
   ],
   errorElement:<Error></Error>
 }
-
-
-
-
 ])
 
 
