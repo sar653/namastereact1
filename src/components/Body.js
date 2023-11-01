@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard , {withPromotedLabel}from "./RestaurantCard";
 import resObj from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "../Shimmer";
@@ -10,6 +10,9 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
+  //console.log(listOfRestaurant)
+  const RestaurantCardPromoted=withPromotedLabel(RestaurantCard)
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -19,7 +22,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.083696976863374&lng=80.19907616078854&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json.data);
+    //console.log(json.data);
     setListOfRestaurant(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -28,7 +31,7 @@ const Body = () => {
     );
   };
 
-  console.log("listOfRestaurant", listOfRestaurant);
+ // console.log("listOfRestaurant", listOfRestaurant);
 
   const onlineStatus = useOnlineStatus();
 
@@ -81,8 +84,8 @@ const Body = () => {
           <Link
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
-          >
-            <RestaurantCard resData={restaurant} />
+          >{ restaurant.info.veg?<RestaurantCardPromoted resData={restaurant} />:
+            <RestaurantCard resData={restaurant} />}
           </Link>
         ))}
       </div>

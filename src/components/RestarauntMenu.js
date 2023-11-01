@@ -15,8 +15,10 @@ const resInfo =useRestaurantMenu(resId)
   const { name, cuisines, costForTwoMessages } =  resInfo?.cards[0]?.card?.card?.info;
 
  const { itemCards } =  resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+ 
    console.log("resInfo",resInfo);
    console.log("itemCards",itemCards);
+   console.log("what inside",resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards)
   return (
     <div className="menu">
       <h1>{name}</h1>
