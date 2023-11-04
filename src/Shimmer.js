@@ -1,19 +1,21 @@
 const Shimmer=()=>{
-    return(<div className="shimmer-container">
-        <div className="Shimmer-cards"></div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards">card</div>
-        <div className="Shimmer-cards"></div>
-        <div className="Shimmer-cards"></div>
-        <div className="Shimmer-cards"></div>
-        <div className="Shimmer-cards"></div>
-        <div className="Shimmer-cards"></div>
+    return(<div className="shimmer-container flex flex-wrap justify-center">
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        
+        <div className="w-200 h-300 bg-grey m-15"></div>
+        <div className="w-200 h-300 bg-grey m-15"></div>
         </div>
     )
         
